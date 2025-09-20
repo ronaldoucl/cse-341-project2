@@ -3,33 +3,33 @@
 GET http://localhost:3000/books
 
 ### Get books by id
-GET http://localhost:3000/books/68cee7aab843a7645f61f512
+GET http://localhost:3000/books/68ceee903bc354a74d75747b
 
 ### Create book
 POST http://localhost:3000/books HTTP/1.1
 content-type: application/json
 
 {
-    "author": "Robert C. Martin",
-    "title": "Clean Code",
-    "description": "A handbook of agile software craftsmanship",
+    "author": "Andrew Hunt, David Thomas",
+    "title": "The Pragmatic Programmer",
+    "description": "Your journey to mastery, 20th Anniversary Edition",
     "genre": "Programming",
-    "isbn": "9780132350884",
+    "isbn": "9780135957059",
     "available": true
 }
 
 ### PUT book
-PUT http://localhost:3000/books/68cee7aab843a7645f61f512 HTTP/1.1
+PUT http://localhost:3000/books/68cef26846e9bccb8d6d7be9 HTTP/1.1
 content-type: application/json
 
 {
-    "author": "Robert C. Martin",
-    "title": "Clean Code",
-    "description": "A handbook of agile software craftsmanship",
+    "author": "Douglas Crockford",
+    "title": "JavaScript: The Good Parts",
+    "description": "Unearthing the excellence in JavaScript",
     "genre": "Programming",
-    "isbn": "9780132350333",
+    "isbn": "9780596517748",
     "available": true
-}
+  }
 
 ### DELETE book
-DELETE http://localhost:3000/books/68cee7aab843a7645f61f512 HTTP/1.1
+DELETE http://localhost:3000/books/68cef26846e9bccb8d6d7be9 HTTP/1.1
