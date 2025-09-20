@@ -1,0 +1,35 @@
+// LOCAL HOST
+### Get all books
+GET http://localhost:3000/books
+
+### Get books by id
+GET http://localhost:3000/books/68cee7aab843a7645f61f512
+
+### Create book
+POST http://localhost:3000/books HTTP/1.1
+content-type: application/json
+
+{
+    "author": "Robert C. Martin",
+    "title": "Clean Code",
+    "description": "A handbook of agile software craftsmanship",
+    "genre": "Programming",
+    "isbn": "9780132350884",
+    "available": true
+}
+
+### PUT book
+PUT http://localhost:3000/books/68cee7aab843a7645f61f512 HTTP/1.1
+content-type: application/json
+
+{
+    "author": "Robert C. Martin",
+    "title": "Clean Code",
+    "description": "A handbook of agile software craftsmanship",
+    "genre": "Programming",
+    "isbn": "9780132350333",
+    "available": true
+}
+
+### DELETE book
+DELETE http://localhost:3000/books/68cee7aab843a7645f61f512 HTTP/1.1
