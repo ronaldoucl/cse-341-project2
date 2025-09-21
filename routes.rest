@@ -33,3 +33,42 @@ content-type: application/json
 
 ### DELETE book
 DELETE http://localhost:3000/books/68cef26846e9bccb8d6d7be9 HTTP/1.1
+
+
+
+## CUSTOMERS REST API
+
+### Get all customers
+GET http://localhost:3000/customers
+
+### Get customer by id
+GET http://localhost:3000/customers/68cf9cf40706a8ca2a62d2e9
+
+### Create customer
+POST http://localhost:3000/customers HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Lucas",
+    "lastName": "Müller",
+    "email": "lucas.mueller@example.de",
+    "phone": "+49-171-555-6666",
+    "address": "Hauptstrasse 45, Berlin, Germany",
+    "active": true
+}
+
+### PUT customer
+PUT http://localhost:3000/customers/68cf9d610706a8ca2a62d2ed HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Sophie",
+    "lastName": "Johnson",
+    "email": "s.dubois@example.fr",
+    "phone": "+33-1-44-55-66-77",
+    "address": "12 Rue Lafayette, Paris, France",
+    "active": true
+}
+
+### DELETE customer
+DELETE http://localhost:3000/customers/68cf9cf40706a8ca2a62d2e9 HTTP/1.1
