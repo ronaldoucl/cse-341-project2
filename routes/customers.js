@@ -6,11 +6,12 @@ const {
   updateCustomerValidation,
 } = require("../validators/customerValidator");
 const validate = require("../validators/validate");
+const { isAuthenticated } = require("../middleware/authenticate");
 
 router.get("/", customersController.getAll);
 router.get("/:id", customersController.getSingle);
-router.post("/", createCustomerValidation, validate, customersController.createCustomer);
-router.put("/:id", updateCustomerValidation, validate, customersController.updateCustomer);
-router.delete("/:id", customersController.deleteCustomer);
+router.post("/", isAuthenticated, createCustomerValidation, validate, customersController.createCustomer);
+router.put("/:id", isAuthenticated, updateCustomerValidation, validate, customersController.updateCustomer);
+router.delete("/:id", isAuthenticated, customersController.deleteCustomer);
 
 module.exports = router;
