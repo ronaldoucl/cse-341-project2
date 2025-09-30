@@ -43,7 +43,7 @@ const getSingle = async (req, res) => {
  * @access  Public
  */
 const createBook = async (req, res) => {
-  //#swager.tags=['Books']
+  //#swagger.tags=['Books']
   const book = {
     title: req.body.title,
     author: req.body.author,
